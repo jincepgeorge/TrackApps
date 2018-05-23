@@ -1,0 +1,14 @@
+<section class="home">
+	<div class="top-pannel">
+		<header></header>
+		
+  </div>
+	<div class="tabs" >
+    <div  ng-repeat="client in clientList" ng-if="client.status" ng-click="menuClick(client.appStoreTag,$event)" ui-sref=".applist" ui-sref-active="active" class="tab" ng-class="{'tabopen':client.appStoreTag==selectedClient}">
+        <span>{{client.clientName}}</span>
+    </div>
+    
+  </div>
+	<div ui-view></div>
+</section>
+

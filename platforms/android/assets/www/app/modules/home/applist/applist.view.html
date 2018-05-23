@@ -1,0 +1,66 @@
+<section class="home">
+		<div class="right-inner-addon ">
+	    <i class="fa fa-search" aria-hidden="true"></i>
+	    <input type="search" class="form-control" placeholder="Search" ng-model="appName"/>
+		</div>
+
+		<ul class="list-group">
+			<a href="" ng-click="getDetails(app)" class="list-group-item" ng-repeat="app in appData | filter: {trackName: appName}">
+				<img ng-src="{{app.artworkUrl60}}" />
+    		<h5 class="list-group-item-heading">{{app.trackName}}</h5>
+    		<p class="list-group-item-text">Version: {{app.version}}</p>
+				<p class="list-group-item-text">Release Data: {{app.releaseDate | date_format}}</p>
+				<button type="button" ng-click="install(app.trackId, $event)" class="btn btn-success list-btn">Install</button>
+  		</a>
+		</ul>
+        <div class="email-button" ng-click="emailList(appData, 'Deloitte', appCount)">
+            <i class="fa fa-envelope" aria-hidden ="true"></i>
+        </div>
+         <div data-toggle="modal" data-target="#myModal" class="settings-button">
+            <i class="fa fa-cog" aria-hidden ="true"></i>
+        </div>
+        <div class="notificationCount">{{appCount}} Apps Available </div>
+        <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Select Developers</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<div class="ot-checkboxes">
+						<div class="row">
+							<div class="col-sm-6 client-ls-min-height" ng-repeat="client in localClientList">
+								
+								<input id="task{{$index}}" type="checkbox" ng-checked="client.status" ng-model="client.status" ng-change="clientListChecked($index,client.status)" />
+								<label for="task{{$index}}">{{client.clientName}}</label>
+
+							</div>
+						</div>
+					</div>
+        
+      </div>
+      <div class="modal-footer">
+         <form name="form" role="form">
+      <div class="row add-row">
+       
+       <div class="col-xs-8">
+          <input type="text" placeholder="not in the list?" ng-model="developerName" required></input>
+     
+       </div>
+       <div class="col-xs-4">  
+  <button type="button" class="btn btn-primary" ng-disabled="form.$invalid" ng-click="addPreference();">Add</button>
+         </div>
+      </div>
+      </form>
+     
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" ng-click="savePreference();">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>

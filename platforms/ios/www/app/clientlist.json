@@ -1,0 +1,84 @@
+[{
+	"clientName":"EY",
+	"status":true,
+	"appStoreTag":"EY Global Services Limited"
+
+},
+{
+	"clientName":"KPMG",
+	"status":true,
+	"appStoreTag":"KPMG"
+
+},{
+	"clientName":"PwC",
+	"status":true,
+	"appStoreTag":"PWC"
+
+},{
+	"clientName":"Deloitte",
+	"status":true,
+	"appStoreTag":"Deloitte"
+
+},{
+	"clientName":"AKQA",
+	"status":false,
+	"appStoreTag":"AKQA"
+
+},{
+	"clientName":"Bottle Rocket",
+	"status":false,
+	"appStoreTag":"Bottle Rocket"
+
+},{
+	"clientName":"CapTech Ventures",
+	"status":false,
+	"appStoreTag":"CapTech Ventures"
+
+},{
+	"clientName":"Fuzz",
+	"status":false,
+	"appStoreTag":"Fuzz"
+
+},{
+	"clientName":"IBM",
+	"status":false,
+	"appStoreTag":"IBM"
+
+},{
+	"clientName":"L&T Infotech",
+	"status":false,
+	"appStoreTag":"L&T Infotech"
+
+},{
+	"clientName":"Mobiquity",
+	"status":false,
+	"appStoreTag":"Mobiquity"
+
+}
+,{
+	"clientName":"Solstice",
+	"status":false,
+	"appStoreTag":"Solstice"
+
+},{
+	"clientName":"VirtusaPolaris",
+	"status":false,
+	"appStoreTag":"VirtusaPolaris"
+
+},{
+	"clientName":"WillowTree",
+	"status":false,
+	"appStoreTag":"WillowTree"
+
+},{
+	"clientName":"TCS",
+	"status":false,
+	"appStoreTag":"Tata Consultancy Services"
+
+},{
+	"clientName":"Wipro",
+	"status":false,
+	"appStoreTag":"Wipro"
+
+}
+]

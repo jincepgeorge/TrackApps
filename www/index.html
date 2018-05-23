@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="nakApp">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Application</title>
+		<meta name="description" content="">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, viewport-fit=cover">
+		<meta name=”apple-mobile-web-app-capable” content=yes>
+		<meta name = "format-detection" content = "telephone=no">
+		<meta name=”apple-mobile-web-app-status-bar-style” content=”black”>
+
+		<!-- injector:css -->
+		<link rel="stylesheet" href="app/lib/bootstrap.min.css">
+		<link rel="stylesheet" href="app/lib/font-awesome.min.css">
+		<link rel="stylesheet" href="app/lib/angular-carousel.min.css">
+		<link rel="stylesheet" href="css/app.css">
+		<!-- endinjector -->
+
+	</head>
+	<body>
+		<loader></loader>
+
+		<div ui-view></div>
+		<script src="app/lib/jquery.js"></script>
+		<script src="app/lib/angular.js"></script>
+		<script src="cordova.js"></script>
+		<script src="cordova_plugins.js"></script>
+		<!-- injector:js -->
+		<script src="app/lib/angular-ios9-uiwebview.patch.js"></script>
+		<script src="app/lib/jquery.js"></script>
+		<script src="app/lib/angular.js"></script>
+		<script src="app/lib/fastclick.js"></script>
+		<script src="app/lib/angular-ui-router.min.js"></script>
+		<script src="app/lib/bootstrap.min.js"></script>
+		<script src="app/lib/angular-animate.min.js"></script>
+		<script src="app/lib/underscore-min.js"></script>
+		<script src="app/lib/angular-touch.min.js"></script>
+		<script src="app/lib/angular-carousel.min.js"></script>
+		<script src="app/app.js"></script>
+		<script src="app/modules/home/deloitte/deloitteController.js"></script>
+		<script src="app/modules/shared/directives/directives.js"></script>
+		<script src="app/router.js"></script>
+		<script src="app/modules/shared/factory/factory.js"></script>
+		<script src="app/config-generated.js"></script>
+		<script src="app/modules/home/ey/eyController.js"></script>
+		<script src="app/modules/shared/services/service.js"></script>
+		<script src="app/modules/shared/services/dataService.js"></script>
+		<script src="app/modules/shared/filters/interpolate.js"></script>
+		<script src="app/modules/shared/filters/filter.js"></script>
+		<script src="app/modules/home/homeController.js"></script>
+		<script src="app/modules/home/details/detailsController.js"></script>
+		<script src="app/modules/home/pwc/pwcController.js"></script>
+		<script src="app/modules/home/kpmg/kpmgController.js"></script>
+		<script src="app/modules/home/main.home.controller.js"></script>
+		<script src="app/modules/home/applist/applist.controller.js"></script>
+		<!-- endinjector -->
+	</body>
+</html>

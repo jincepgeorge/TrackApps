@@ -1,0 +1,28 @@
+<section class="details">
+	<div style=" margin-top: 60px;" class="details-data">
+		<ul ng-show="app.ipadScreenshotUrls.length > 0" rn-carousel rn-carousel-index="carouselIndex" rn-carousel-auto-slide="{{app.ipadScreenshotUrls.length}}" rn-carousel-buffered class="image">
+		  <li ng-repeat="image in app.ipadScreenshotUrls">
+		    <div class="layer"><img ng-src="{{image}}"/></div>
+		  </li>
+		</ul>
+        <ul ng-show="app.screenshotUrls.length > 0 && app.ipadScreenshotUrls.length == 0" rn-carousel rn-carousel-index="carouselIndex" rn-carousel-auto-slide="{{app.screenshotUrls.length}}" rn-carousel-buffered class="image">
+            <li ng-repeat="image in app.screenshotUrls">
+                <div class="layer"><img ng-src="{{image}}"/></div>
+            </li>
+        </ul>
+		<div rn-carousel-indicators ng-if="app.ipadScreenshotUrls.length > 1" slides="app.ipadScreenshotUrls" rn-carousel-index="carouselIndex" class="carosel-index"></div>
+        <div rn-carousel-indicators ng-if="app.screenshotUrls.length > 1 && app.ipadScreenshotUrls.length ==0" slides="app.screenshotUrls" rn-carousel-index="carouselIndex" class="carosel-index"></div>
+	</div>
+	<ul class="list-group">
+		<a href="" class="list-group-item">
+			<img ng-src="{{app.artworkUrl60}}" />
+			<h5 class="list-group-item-heading">{{app.trackName}}</h5>
+			<p class="list-group-item-text">Version: {{app.version}}</p>
+			<p class="list-group-item-text">Release Data: {{app.releaseDate | date_format}}</p>
+			<button type="button" ng-click="install(app.trackId, $event)" class="btn btn-success list-btn">Install</button>
+		</a>
+	</ul>
+	<div class="details-data">
+		<p><b>Description: </b>{{app.description}}</p>
+	</div>
+</section>
